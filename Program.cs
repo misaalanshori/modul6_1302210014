@@ -32,6 +32,29 @@
             }
             misaalanshori.PrintAllVideoPlaycount();
             Console.WriteLine("Total Play Count User: " + misaalanshori.GetTotalVideoPlayCount());
+
+            Console.WriteLine("Mulai Testing...");
+            SayaTubeVideo vidioTest;
+            SayaTubeUser userTest;
+            userTest = new SayaTubeUser(null);
+            userTest = new SayaTubeUser("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
+            userTest = new SayaTubeUser("testing user");
+            vidioTest = new SayaTubeVideo(null);
+            vidioTest = new SayaTubeVideo("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+            vidioTest = new SayaTubeVideo("VidTest");
+            vidioTest.IncreasePlayCount(25000001);
+            vidioTest.IncreasePlayCount(-1);
+            for (int i = 0; i < 87; i++)
+            {
+                vidioTest = new SayaTubeVideo("Sebuah Video Testing Oleh Muhammad Isa Al Anshori");
+                vidioTest.IncreasePlayCount(25000000);
+                userTest.addVideo(vidioTest);
+            }
+            Console.WriteLine(userTest.GetTotalVideoPlayCount());
+            userTest.PrintAllVideoPlaycount();
+            
+
+
         }
     }
 }

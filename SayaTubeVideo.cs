@@ -17,6 +17,8 @@ namespace modul6_1302210014
 
         public SayaTubeVideo(string title)
         {
+            Debug.Assert(title != null && title.Length <= 200, "Judul Video Tidak Valid!");
+            
             this.title = title;
             id = rnd.Next(10000, 100000);
             playCount = 0;
@@ -24,8 +26,9 @@ namespace modul6_1302210014
 
         public void IncreasePlayCount(int count)
         {
+            Debug.Assert(count > 0, "Penambahan Play Count tidak boleh negatif");
+            Debug.Assert(count <= 25000000, "Penambahan Play Count maksimal 25 juta setiap pemanggilan!");
             playCount += count;
-
         }
 
         public void PrintVideoDetails()
